@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Name for the application [CHAR LIMIT=12] -->
+    <string name="app_name">Habit Tracker</string>
+
+    <!-- Label for overflow menu option that inserts fake habit data into the app [CHAR LIMIT=20] -->
+    <string name="action_insert_default_data">Insert Default Data</string>
+
+    <!-- Title for the activity to add a new habit [CHAR LIMIT=20] -->
+    <string name="editor_activity_title_new_habit">Add habit</string>
+
+    <!-- Label for editor menu option to save habit and leave editor [CHAR LIMIT=20] -->
+    <string name="action_save">Save</string>
+
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_overview">Overview</string>
+
+    <!-- Label for feedback information in the editor [CHAR LIMIT=30] -->
+    <string name="category_feedback">Feedback</string>
+
+    <!-- Label for times information in the editor [CHAR LIMIT=30] -->
+    <string name="category_how_often">How Often</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_habit_name">Name</string>
+
+    <!-- Text hint for place field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_habit_place">place</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_times">times</string>
+
+    <!-- per day [CHAR LIMIT=5] -->
+    <string name="per_a_day">per day</string>
+
+    <!-- Label for dropdown menu option if the habit's feedback is normal [CHAR LIMIT=20] -->
+    <string name="normal">Normal</string>
+
+    <!-- Label for dropdown menu option if the habit is beautiful  [CHAR LIMIT=20] -->
+    <string name="beautiful">beautiful</string>
+
+    <!-- Label for dropdown menu option if the habit is bad [CHAR LIMIT=20] -->
+    <string name="bad">bad</string>
+</resources>

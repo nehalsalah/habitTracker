@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Layout for the editor -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    tools:context=".EditorActivity">
+
+    <!-- Overview category -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_overview" />
+
+        <!-- Input fields -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:paddingLeft="4dp">
+
+            <!-- Name field -->
+            <EditText
+                android:id="@+id/edit_habit_name"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_habit_name"
+                android:inputType="textCapWords" />
+
+            <!-- place field -->
+            <EditText
+                android:id="@+id/edit_habit_place"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_habit_place"
+                android:inputType="textCapWords" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- feedback category -->
+    <LinearLayout
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_feedback" />
+
+        <!-- Input field -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <!-- feedback drop-down spinner -->
+            <Spinner
+                android:id="@+id/spinner_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:paddingRight="16dp"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- times category -->
+    <LinearLayout
+        android:id="@+id/times"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            style="@style/CategoryStyle"
+            android:text="@string/category_how_often" />
+
+        <!-- Input fields -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="4dp">
+
+            <!-- times field -->
+            <EditText
+                android:id="@+id/edit_habit_times"
+                style="@style/EditorFieldStyle"
+                android:hint="@string/hint_times"
+                android:inputType="number" />
+
+            <!-- per day -->
+            <TextView
+                android:id="@+id/label_per_day"
+                style="@style/EditorUnitsStyle"
+                android:text="@string/per_a_day" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
