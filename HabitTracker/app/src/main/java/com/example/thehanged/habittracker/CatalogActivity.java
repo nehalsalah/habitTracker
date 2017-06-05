@@ -55,10 +55,10 @@ public class CatalogActivity extends AppCompatActivity {
      * Temporary helper method to display information in the onscreen TextView about the state of
      * the pets database.
      */
-    private void displayDatabaseInfo() {
+
+    public Cursor readAllHabits() {
         // Create and/or open a database to read from it
         SQLiteDatabase db = mDbHelper.getReadableDatabase();
-
         // Define a projection that specifies which columns from the database
         // you will actually use after this query.
         String[] projection = {
@@ -67,7 +67,6 @@ public class CatalogActivity extends AppCompatActivity {
                 habitEntry.COLUMN_place,
                 habitEntry.COLUMN_feedback,
                 habitEntry.COLUMN_times};
-
         // Perform a query on the pets table
         Cursor cursor = db.query(
                 habitEntry.TABLE_NAME,   // The table to query
@@ -77,6 +76,14 @@ public class CatalogActivity extends AppCompatActivity {
                 null,                  // Don't group the rows
                 null,                  // Don't filter by row groups
                 null);                   // The sort order
+
+        return cursor;
+    }
+
+    private void displayDatabaseInfo() {
+
+
+        Cursor cursor = readAllHabits();
 
         TextView displayView = (TextView) findViewById(R.id.text_view_habit);
 
